@@ -39,7 +39,7 @@ def Censys(Search, output):
 			
 def Shodan(Search, output):
 	success2 = []
-	SHODAN_API_KEY = "fW9K4luEx65RscfUiPDakiqp15jiK5f6"
+	SHODAN_API_KEY = "YOUR_SHODAN_API_KEY"
 	api = shodan.Shodan(SHODAN_API_KEY)
 	try:
 		results = api.search(Search)
