@@ -1,0 +1,5 @@
+requests
+shodan
+beautifulsoup4
+colored
+python3-censys
