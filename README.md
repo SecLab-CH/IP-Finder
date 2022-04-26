@@ -15,6 +15,15 @@ $ git clone https://github.com/SecLab-CH/IP-Finder
 $ pip3 install -r requirements.txt
 ```
 
+# Setup:
+```
+[+] SHODAN & ZOOMEYE
+Put your <API_KEY> into code.
+
+[+] CENSYS
+$ censys config
+```
+
 # Run:
 ```
-$ python3 IP-Finder.py --search (your search) ex:  $ python3 IP-Finder.py --search "apache 2.4.1"
+$ python3 IP-Finder.py --search (your search) Example: $ python3 IP-Finder.py --search "apache 2.4.1"
