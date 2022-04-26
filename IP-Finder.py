@@ -60,7 +60,6 @@ def Shodan(Search, output):
 				success = True
 			if success != False and c != False:
 				if result['ip_str'] is not output:
-					#print(result['data'])
 					output.append(result['ip_str'])
 	except shodan.APIError as e:
 		print('Error: {}'.format(e))
