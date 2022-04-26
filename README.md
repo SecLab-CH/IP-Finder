@@ -1,4 +1,4 @@
-# IP-Finder
+# :mag: IP-Finder
 IP-Finder is an Open Source Intelligence (OSINT) tool that helps you collect IPs of companies, Servers, OS and much more. 
 This tool uses some of the best Search Engines (Shodan.io, ZoomEye.org and Censys.io)
 
