@@ -43,22 +43,8 @@ def Shodan(Search, output):
 	api = shodan.Shodan(SHODAN_API_KEY)
 	try:
 		results = api.search(Search)
-		searchsplit = Search.split(" ")
 		for result in results['matches']:
-			for word in searchsplit:
-				if word in result['data']:
-					success2.append(True)
-				else:
-					success2.append(False)
-			c = True
-			for y in success2:
-				if y != True:
-					c = False
-					break
-			success = False
-			if all(x in result['data'] for x in Search):
-				success = True
-			if success != False and c != False:
+			if Search.lower() in result['data'].lower():
 				if result['ip_str'] is not output:
 					output.append(result['ip_str'])
 	except shodan.APIError as e:
