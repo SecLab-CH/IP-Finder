@@ -38,7 +38,6 @@ def Censys(Search, output):
 			output.append(result[0]['ip'])
 			
 def Shodan(Search, output):
-	success2 = []
 	SHODAN_API_KEY = "YOUR_SHODAN_API_KEY"
 	api = shodan.Shodan(SHODAN_API_KEY)
 	try:
