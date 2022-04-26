@@ -67,6 +67,9 @@ print(stylize(logo,colored.fg('cyan')))
 (options, arguments) = Start()
 
 try:
+	if len(sys.argv) == 1:
+		print(stylize("""[-] Please specify Search. Example: python3 IP-Finder.py Device type or version""", colored.fg('cyan')))
+		sys.exit(0)
 	output = []
 	str = ''
 	print(stylize(f"""[+] Search for: {options.search}\n""",colored.fg('cyan')))
