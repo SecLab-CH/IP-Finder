@@ -68,9 +68,9 @@ def searching():
 
 def switch(argument):
 	print(stylize("--------------------------------------------------------------------", colored.fg("white")))
-	print("What Search Engines do you want use?(Please put "+" delimiter if you want to search on multiple Search Engnes) ")
+	print("[?] Which Search Engines do you want use?(Please put "+" delimiter if you want to search on multiple Search Engnes!) ")
 	print("s --> Shodan, c --> Censys, z --> ZoomEye, a --> all ")
-	choice = input('Enter our choice --> ')
+	choice = input('Enter your choice --> ')
 	searching()
 	output = []
 	choicelow=choice.lower()
