@@ -1,5 +1,5 @@
 #Author:    Security Lab
-#Github:    https://github.com/SecLab-CH/IP-Finder
+#Github:    https://github.com/SecLab-CH
 #Website:   https://www.sec-lab.com/
 
 import requests,json,colored,time,shodan
