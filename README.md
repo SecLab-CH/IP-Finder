@@ -8,7 +8,6 @@ Linux
 Windows
 Android
 ```
-
 # Install:
 ```
 $ git clone https://github.com/SecLab-CH/IP-Finder
