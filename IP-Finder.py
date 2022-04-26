@@ -68,7 +68,7 @@ print(stylize(logo,colored.fg('cyan')))
 
 try:
 	if len(sys.argv) == 1:
-		print(stylize("""[-] Please specify Search. Example: python3 IP-Finder.py Device type or version""", colored.fg('cyan')))
+		print(stylize("""[-] Please specify Search. Example: python3 IP-Finder.py -s Device type or version""", colored.fg('cyan')))
 		sys.exit(0)
 	output = []
 	str = ''
@@ -93,5 +93,5 @@ try:
 except Exception as e:
 	print(e)
 	print(stylize("""[-] Please specify Search
-	ex: python3 IP-Finder.py Device type or version""", colored.fg('cyan')))
+	ex: python3 IP-Finder.py -s Device type or version""", colored.fg('cyan')))
 
