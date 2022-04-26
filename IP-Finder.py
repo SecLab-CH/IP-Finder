@@ -115,7 +115,6 @@ def switch(argument):
 		
 		
 print(stylize(logo,colored.fg('cyan')))
-
 (options, arguments) = Start()
 if len(sys.argv) == 1:
 		print(stylize("""[-] Please specify Search. Example: python3 IP-Finder.py Device type or version""", colored.fg('cyan')))
