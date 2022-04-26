@@ -38,16 +38,29 @@ def Censys(Search, output):
 			output.append(result[0]['ip'])
 			
 def Shodan(Search, output):
-	SHODAN_API_KEY = "YOUR_SHODAN_API_KEY"
+	success2 = []
+	SHODAN_API_KEY = "fW9K4luEx65RscfUiPDakiqp15jiK5f6"
 	api = shodan.Shodan(SHODAN_API_KEY)
 	try:
 		results = api.search(Search)
+		searchsplit = Search.split(" ")
 		for result in results['matches']:
+			for word in searchsplit:
+				if word in result['data']:
+					success2.append(True)
+				else:
+					success2.append(False)
+			c = True
+			for y in success2:
+				if y != True:
+					c = False
+					break
 			success = False
 			if all(x in result['data'] for x in Search):
 				success = True
-			if success != False:
+			if success != False and c != False:
 				if result['ip_str'] is not output:
+					#print(result['data'])
 					output.append(result['ip_str'])
 	except shodan.APIError as e:
 		print('Error: {}'.format(e))
