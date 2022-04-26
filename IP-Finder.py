@@ -1,6 +1,6 @@
 #Author:    Security Lab
 #Github:    https://github.com/SecLab-CH
-#Website:   https://www.sec-lab.com/
+#Website:   https://www.sec-lab.com
 
 import requests,json,colored,time,shodan
 from censys.search import CensysHosts
