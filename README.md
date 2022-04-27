@@ -17,11 +17,11 @@ $ pip3 install -r requirements.txt
 # Setup:
 ```
 [+] SHODAN & ZOOMEYE
-Paste your <API_KEY> in config_api.py file
+Copy your <API_KEY> in config_api.py file
 
 [+] CENSYS
 $ censys config
-Paste your <Censys_API_ID> and <Censys_API_Secret>
+Copy your <Censys_API_ID> and <Censys_API_Secret>
 ```
 
 # Run:
