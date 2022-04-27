@@ -1,5 +1,6 @@
 # :mag: IP-Finder :earth_americas:
-IP-Finder is an Open Source Intelligence (OSINT) tool that helps you collect IPs of companies, Servers, OS and much more. 
+IP-Finder is an Open Source Intelligence (OSINT) tool that helps you collect IPs of Companies, Servers, OS and much more.
+It also reports all the CVEs for which the different Endpoints are affected.
 This tool uses some of the best Search Engines (Shodan.io, ZoomEye.org and Censys.io)
 
 # Supported OS:
