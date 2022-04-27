@@ -11,7 +11,9 @@ from bs4 import BeautifulSoup
 import requests
 import sys
 import re
+from config_api import shodan_key, zoomeye_key
 
+ 
 logo = """
  
 	 ___________  ______ _           _           
@@ -43,14 +45,13 @@ def Censys(Search, output):
 			output.append(result[0]['ip'])
 
 def Shodan(Search, output):
-	SHODAN_API_KEY = "YOUR_SHODAN_API_KEY"
-	if  SHODAN_API_KEY == "YOUR_SHODAN_API_KEY":
+	if  shodan_key == "YOUR_SHODAN_API_KEY":
 		print(stylize("[-] Insert valid Shodan API Key",colored.fg('red')))
 		sys.exit(0)
 	print(stylize("--------------------------------------------------------------------", colored.fg("yellow")))
 	print(stylize(f"""[+] Search for: {options.search}\n""",colored.fg('cyan')))
 	print(stylize(f"""[+] Searching in Shodan. . .\n""",colored.fg('yellow')))
-	api = shodan.Shodan(SHODAN_API_KEY)
+	api = shodan.Shodan(shodan_key)
 	try:
 		Searchlow = Search.lower()
 		results = api.search(Searchlow)
@@ -88,11 +89,11 @@ def Shodan(Search, output):
 
 
 def ZoomEye(Search, output):
-	zm = zoomeye.ZoomEye()
-	zm.api_key = "YOUR_ZOOMEYE_API_KEY"
-	if  zm.api_key == "YOUR_ZOOMEYE_API_KEY":
+	if  zoomeye_key == "YOUR_ZOOMEYE_API_KEY":
 		print(stylize("[-] Insert valid ZoomEye API Key",colored.fg('red')))
 		sys.exit(0)
+	zm = zoomeye.ZoomEye()
+	zm.api_key = zoomeye_key
 	print(styzm.api_keylize("--------------------------------------------------------------------", colored.fg("yellow")))
 	print(stylize(f"""[+] Search for: {options.search}\n""",colored.fg('cyan')))
 	print(stylize(f"""[+] Searching in Zoomeye. . .\n""",colored.fg('yellow')))
