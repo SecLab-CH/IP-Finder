@@ -1,6 +1,6 @@
 #Author:    Security Lab
 #Github:    https://github.com/SecLab-CH
-#Website:   https://www.sec-lab.com/
+#Website:   https://www.sec-lab.com
 
 import requests,json,colored,time,shodan
 from censys.search import CensysHosts
@@ -20,7 +20,8 @@ logo = """
 	  | | |  __/  |  _| | | '_ \ / _` |/ _ \ '__|
 	 _| |_| |     | |   | | | | | (_| |  __/ |   
 	 \___/\_|     \_|   |_|_| |_|\__,_|\___|_|   
-												 										
+		
+		https://www.sec-lab.com
                                                                 
 """
 
