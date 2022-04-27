@@ -43,10 +43,13 @@ def Censys(Search, output):
 			output.append(result[0]['ip'])
 
 def Shodan(Search, output):
+	SHODAN_API_KEY = "YOUR_SHODAN_API_KEY"
+	if  SHODAN_API_KEY == "YOUR_SHODAN_API_KEY":
+		print(stylize("[-] Insert valid Shodan API Key",colored.fg('red')))
+		sys.exit(0)
 	print(stylize("--------------------------------------------------------------------", colored.fg("yellow")))
 	print(stylize(f"""[+] Search for: {options.search}\n""",colored.fg('cyan')))
 	print(stylize(f"""[+] Searching in Shodan. . .\n""",colored.fg('yellow')))
-	SHODAN_API_KEY = "YOUR_SHODAN_API_KEY"
 	api = shodan.Shodan(SHODAN_API_KEY)
 	try:
 		Searchlow = Search.lower()
@@ -85,11 +88,14 @@ def Shodan(Search, output):
 
 
 def ZoomEye(Search, output):
-	print(stylize("--------------------------------------------------------------------", colored.fg("yellow")))
-	print(stylize(f"""[+] Search for: {options.search}\n""",colored.fg('cyan')))
-	print(stylize(f"""[+] Searching in Zoomeye. . .\n""",colored.fg('yellow')))
 	zm = zoomeye.ZoomEye()
 	zm.api_key = "YOUR_ZOOMEYE_API_KEY"
+	if  zm.api_key == "YOUR_ZOOMEYE_API_KEY":
+		print(stylize("[-] Insert valid ZoomEye API Key",colored.fg('red')))
+		sys.exit(0)
+	print(styzm.api_keylize("--------------------------------------------------------------------", colored.fg("yellow")))
+	print(stylize(f"""[+] Search for: {options.search}\n""",colored.fg('cyan')))
+	print(stylize(f"""[+] Searching in Zoomeye. . .\n""",colored.fg('yellow')))
 	results = zm.dork_search(Search)
 	for result in results:
 		if result['ip'] is not output:
@@ -115,7 +121,7 @@ def switch(argument):
 		engine = choicelow.split("+")
 	for opt in engine:
 		if opt != 's' and opt != 'c' and opt != 'z' and opt != 'a':
-			print("[-] Invalid Search Engine!")
+			print(stylize("[-] Invalid Search Engine",colored.fg('red')))
 			sys.exit(0)
 	if len(engine) == 1 and engine == 'a':
 		Shodan(argument, output)
