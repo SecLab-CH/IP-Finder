@@ -17,7 +17,7 @@ $ pip3 install -r requirements.txt
 # Setup:
 ```
 [+] SHODAN & ZOOMEYE
-Paste your <API_KEY> into code
+Paste your <API_KEY> in config_api.py file
 
 [+] CENSYS
 $ censys config
