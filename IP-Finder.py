@@ -102,6 +102,11 @@ def switch(argument):
 	print("[!] Please put '+' delimiter if you want to search on multiple Search Engines! [!] ")
 	print("s --> Shodan, c --> Censys, z --> ZoomEye, a --> All ")
 	choice = input('Enter your choice --> ')
+	while True:
+		print("[?] v -->  Print only vulnerable IP addresses, a --> Print all IP addresses [?] ")
+		choicecve = input('Enter your choice --> ').lower()
+		if (len(choicecve) == 1 and choicecve == 'a' or choicecve == 'v'):
+			break
 	output = []
 	choicelow=choice.lower()
 	if len(choicelow) == 1:
@@ -128,13 +133,19 @@ def switch(argument):
 				sys.exit(0)
 	try:
 		for host in output:
-			print(stylize("--------------------------------------------------------------------", colored.fg("white")))
-			print("[+] " + host)
-			print(stylize("[+] CVEs", colored.fg("red")))
 			url = "https://internetdb.shodan.io/" + host
 			res = requests.get(url).json()
 			if len(res.keys()) > 1:
-				print(stylize(res [u'vulns'], colored.fg("red")))
+				if choicecve == 'v' and len(res[u'vulns']) > 1:
+					print(stylize("--------------------------------------------------------------------", colored.fg("white")))
+					print("[+] " + host)
+					print(stylize("[+] CVEs", colored.fg("red")))
+					print(stylize(res [u'vulns'], colored.fg("red")))
+				elif choicecve == 'a':
+					print(stylize("--------------------------------------------------------------------", colored.fg("white")))
+					print("[+] " + host)
+					print(stylize("[+] CVEs", colored.fg("red")))
+					print(stylize(res [u'vulns'], colored.fg("red")))
 		print(stylize("--------------------------------------------------------------------", colored.fg("white")))
 		print(stylize("[+] Search Done", colored.fg("red")))
 	except Exception as e:
