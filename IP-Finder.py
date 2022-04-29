@@ -196,8 +196,8 @@ def switch(argument, pEdb):
 					print("<<< Thanks for using IP-Finder >>>")
 					sys.exit(0)	
 					
-			#dictionary structure key = CVE, value = Count of IPs affected from CVE x
-			#initialzation dictionary	
+			#dictionary structure key = CVE, value = Count of IPs affected from CVE i-th
+			#initialization dictionary	
 			cve2countip = {}
 			for cve in year2cves:
 					cve2countip.setdefault(cve, 0)
