@@ -6,3 +6,4 @@ censys
 zoomeye
 pandas
 operator
+pyExploitDb
