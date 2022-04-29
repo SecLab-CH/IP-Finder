@@ -228,7 +228,7 @@ def switch(argument, pEdb):
 							for cve in value:
 								if cve == choicesearchsploit:
 									affected_ip.append(key)  
-					choicefile = input('Do you want to save targets to a file? Y/N --> ').upper()
+					choicefile = input('Do you want to save targets in a file? Y/N --> ').upper()
 					if choicefile == 'Y':
 						filename = choicesearchsploit + '.txt'
 						with open(filename, 'w') as f:
