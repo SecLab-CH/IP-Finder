@@ -238,7 +238,7 @@ def switch(argument, pEdb):
 					else:	
 						print(stylize("--------------------------------------------------------------------", colored.fg("white")))
 						print(stylize("[+] Search Done [+] ", colored.fg("green")))
-						print(stylize("[+] all IPs affected: ", colored.fg("cyan")))
+						print(stylize("[+] all IPs affected: ", colored.fg("green")))
 						print(affected_ip)	
 					print(stylize("--------------------------------------------------------------------", colored.fg("white")))
 					print(stylize("[+] Metasploit module: ", colored.fg("green")))
