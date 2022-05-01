@@ -3,12 +3,7 @@ IP-Finder is an Open Source Intelligence (OSINT) tool that helps you collect IPs
 It also reports all the CVEs for which the different Endpoints are affected.
 This tool uses some of the best Search Engines (Shodan.io, ZoomEye.org and Censys.io)
 
-# Supported OS:
-```
-Linux
-Windows
-Android
-```
+
 # Install:
 ```
 $ git clone https://github.com/SecLab-CH/IP-Finder
