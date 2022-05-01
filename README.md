@@ -3,6 +3,13 @@ IP-Finder is an open source intelligence (OSINT) tool that helps collect IPs of 
 It also reports all CVEs (with the associated Metasploit module to run) for which different endpoints are affected.
 This tool uses some of the best search engines (Shodan.io, ZoomEye.org and Censys.io).
 
+# Requirements:
+```
+[*] Metasploit Framework
+[*] Python version 3
+
+[*] Successfully tested on Kali Linux OS
+```
 
 # Install:
 ```
