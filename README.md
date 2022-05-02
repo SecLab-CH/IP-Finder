@@ -11,7 +11,7 @@ This tool uses some of the best search engines (Shodan.io, ZoomEye.org and Censy
 [*] Successfully tested on Kali Linux OS
 ```
 
-## Install:
+# Install:
 ```
 $ git clone https://github.com/SecLab-CH/IP-Finder
 $ pip3 install -r requirements.txt
