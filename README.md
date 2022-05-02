@@ -34,5 +34,4 @@ $ python3 IP-Finder.py --search (your search)
 Example: $ python3 IP-Finder.py --search "apache 2.4.1"
 ```
 
-## Visit Count
-![Visitor Count](https://profile-counter.glitch.me/SecLab-CH/count.svg)
+
