@@ -26,7 +26,7 @@ logo = """
 	 _| |_| |     | |   | | | | | (_| |  __/ |   
 	 \___/\_|     \_|   |_|_| |_|\__,_|\___|_|   
 		
-	     Powerd By https://www.sec-lab.com
+	         Powered by Security Lab
                                                                 
 """
 
