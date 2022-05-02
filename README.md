@@ -3,7 +3,7 @@ IP-Finder is an Open Source Intelligence (OSINT) tool that helps collect IPs of 
 It also reports all CVEs (with the associated Metasploit module to run) for which different endpoints are affected.
 This tool uses some of the best search engines (Shodan.io, ZoomEye.org and Censys.io)
 
-## Requirements:
+## Requirements
 ```
 [*] Metasploit Framework
 [*] Python version 3
@@ -11,13 +11,13 @@ This tool uses some of the best search engines (Shodan.io, ZoomEye.org and Censy
 [*] Successfully tested on Kali Linux OS
 ```
 
-## Install:
+## Install
 ```
 $ git clone https://github.com/SecLab-CH/IP-Finder
 $ pip3 install -r requirements.txt
 ```
 
-## Setup:
+## Setup
 ```
 [+] SHODAN & ZOOMEYE
 Copy your <API_KEY> in config_api.py file
@@ -27,12 +27,12 @@ $ censys config
 Copy your <Censys_API_ID> and <Censys_API_Secret>
 ```
 
-## Run:
+## Run
 ```
 $ python3 IP-Finder.py --search (your search) 
 
 Example: $ python3 IP-Finder.py --search "apache 2.4.1"
 ```
 
-## Visit Count:
+## Visit Count
 ![Visitor Count](https://profile-counter.glitch.me/SecLab-CH/count.svg)
